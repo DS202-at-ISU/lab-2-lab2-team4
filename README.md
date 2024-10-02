@@ -104,7 +104,7 @@ ggplot(data = ames, aes(x = `TotalLivingArea (sf)`)) + geom_histogram(binwidth =
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
-# Croix:
+# Ji Xian Fu:
 which.min(ames$`TotalLivingArea (sf)`)
 ```
 

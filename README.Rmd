@@ -58,7 +58,7 @@ Variable related: TotalLivingArea (sf)
 ggplot(data = ames, aes(x = `TotalLivingArea (sf)`)) + geom_histogram(binwidth = 500)
 ```
 ```{r}
-# Croix:
+# Ji Xian Fu:
 which.min(ames$`TotalLivingArea (sf)`)
 which.max(ames$`TotalLivingArea (sf)`)
 ames$`TotalLivingArea (sf)`[35]
