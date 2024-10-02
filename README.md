@@ -76,6 +76,18 @@ ggplot(data=ames, aes(x=`Sale Price`)) + geom_histogram(binwidth=100000) +
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
+``` r
+min(ames$'Sale Price')
+```
+
+    ## [1] 0
+
+``` r
+max(ames$'Sale Price')
+```
+
+    ## [1] 20500000
+
 4.  Pick a variable that might be related to the main variable. what is
     the range of that variable? plot. describe the pattern.
 
@@ -89,7 +101,7 @@ ggplot(data = ames, aes(x = `TotalLivingArea (sf)`)) + geom_histogram(binwidth =
     ## Warning: Removed 447 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 # Croix:

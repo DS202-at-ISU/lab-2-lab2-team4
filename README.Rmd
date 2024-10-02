@@ -44,7 +44,10 @@ library(classdata)
 ggplot(data=ames, aes(x=`Sale Price`)) + geom_histogram(binwidth=100000) +
   labs(title="histogram", x = "sale price", y="count")
 ```
-
+```{r}
+min(ames$'Sale Price')
+max(ames$'Sale Price')
+```
 
 4. Pick a variable that might be related to the main variable.
 what is the range of that variable? plot. describe the pattern.
