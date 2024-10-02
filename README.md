@@ -18,6 +18,7 @@ Canvas (only one submission per team) to signal to the instructors that
 you are done with your submission.
 
 ``` r
+# Croix:
 library(classdata)
 library(tidyverse)
 ```
@@ -36,6 +37,7 @@ library(tidyverse)
 1.  Inspect the first few lines of the data set
 
 ``` r
+# Croix:
 head(ames)
 ```
 
@@ -53,7 +55,8 @@ head(ames)
     ## #   `FinishedBsmtArea (sf)` <dbl>, `LotArea(sf)` <dbl>, AC <chr>,
     ## #   FirePlace <chr>, Neighborhood <fct>
 
-2.  Is there a variable of special interest?
+2.  Is there a variable of special interest? The variable of special
+    interest is `Sale Price`.
 
 3.  Start the exploration with the main variable:
 
@@ -61,11 +64,52 @@ What is the range of the variable? Draw a histogram for a numeric
 variable or a bar chart, if the variable is categorical. What is the
 general pattern? Is there anything odd?
 
-4.  Pick a variable that might be related to the main variable.
+4.  Pick a variable that might be related to the main variable. what is
+    the range of that variable? plot. describe the pattern.
 
-what is the range of that variable? plot. describe the pattern.
+Variable related: TotalLivingArea (sf)
+
+``` r
+# Croix: 
+ggplot(data = ames, aes(x = `TotalLivingArea (sf)`)) + geom_histogram(binwidth = 500)
+```
+
+    ## Warning: Removed 447 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+# Croix:
+which.min(ames$`TotalLivingArea (sf)`)
+```
+
+    ## [1] 35
+
+``` r
+which.max(ames$`TotalLivingArea (sf)`)
+```
+
+    ## [1] 6482
+
+Croix: The pattern of this histogram is unimodal and slightly skewed
+right. Values to the far right may be potential outliers. The range of
+this variable is from 35 square feet and 6482 square feet.
 
 what is the relationship to the main variable? plot a scatterplot,
 boxplot or facetted barcharts (dependening on the types of variables
 involved). Describe overall pattern, does this variable describe any
 oddities discovered in 3? Identify/follow-up on any oddities.
+
+Ji Xian Fu - Procedure: The main variable for this exploration is Sale
+Price. As a team, do steps 1 through 3. Document your findings in the
+README.Rmd of the lab’s repo.
+
+As a team, discuss different lines of investigation (step 4) and agree
+on who is doing which investigation. Make a note of who is doing what in
+the README.Rmd
+
+Individually: follow through with your line of investigation. Include at
+least one plot that describes the relationship between sales prices and
+your variable. Include one paragraph describing the pattern you see. Are
+there oddities? Follow-up on (some of) them.
