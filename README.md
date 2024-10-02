@@ -62,7 +62,19 @@ head(ames)
 
 What is the range of the variable? Draw a histogram for a numeric
 variable or a bar chart, if the variable is categorical. What is the
-general pattern? Is there anything odd?
+general pattern? Is there anything odd? -Keegan: There is a skew right
+and there are a couple outliers that cost way more than the rest of the
+prices.
+
+``` r
+library(ggplot2)
+library(classdata)
+
+ggplot(data=ames, aes(x=`Sale Price`)) + geom_histogram(binwidth=100000) +
+  labs(title="histogram", x = "sale price", y="count")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 4.  Pick a variable that might be related to the main variable. what is
     the range of that variable? plot. describe the pattern.
