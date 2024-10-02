@@ -116,9 +116,21 @@ which.max(ames$`TotalLivingArea (sf)`)
 
     ## [1] 6482
 
+``` r
+ames$`TotalLivingArea (sf)`[35]
+```
+
+    ## [1] 0
+
+``` r
+ames$`TotalLivingArea (sf)`[6482]
+```
+
+    ## [1] 6007
+
 Croix: The pattern of this histogram is unimodal and slightly skewed
 right. Values to the far right may be potential outliers. The range of
-this variable is from 35 square feet and 6482 square feet.
+this variable is from 0 square feet and 6007 square feet.
 
 what is the relationship to the main variable? plot a scatterplot,
 boxplot or facetted barcharts (dependening on the types of variables
