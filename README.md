@@ -137,6 +137,21 @@ boxplot or facetted barcharts (dependening on the types of variables
 involved). Describe overall pattern, does this variable describe any
 oddities discovered in 3? Identify/follow-up on any oddities.
 
+``` r
+#Allison
+ggplot(data = ames, aes(x = `TotalLivingArea (sf)`, y = `Sale Price`)) + geom_point()
+```
+
+    ## Warning: Removed 447 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- --> Allison: It
+looks like there is no direct relationship between TotalLivingArea (sf)
+and Sale Price. All sale prices stay towards the bottom of the graph and
+do not show a positive or negative linear relation. This variable does
+not describe any of the oddities shown in step 3, as the extremely high
+sale prices are actually for fairly low square footage areas.
+
 Ji Xian Fu - Procedure: The main variable for this exploration is Sale
 Price. As a team, do steps 1 through 3. Document your findings in the
 README.Rmd of the lab’s repo.
